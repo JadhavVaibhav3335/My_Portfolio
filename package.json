@@ -8,11 +8,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemailer": "^6.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JadhavVaibhav3335/My-Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JadhavVaibhav3335/My-Portfolio/issues"
+  },
+  "homepage": "https://github.com/JadhavVaibhav3335/My-Portfolio#readme",
+  "description": ""
 }

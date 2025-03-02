@@ -42,9 +42,9 @@ h1 {
     font-weight: 700; /* Corrected from '500px' */
     font-style:normal;
     font-size: 68px;
-   
     line-height: 70px;
-    color: #222; /* Professional dark tone */
+    color: #030303; /* Professional dark tone */
+    text-shadow:0px 0px 50px #030303;
 }
 
 h4 {
@@ -57,7 +57,8 @@ h4 {
     font-weight: 700;
 }
 h1 span { 
-    color: #df2c26;
+    color: #c18805;
+    text-shadow:0px 0px 20px #d39505;
   }
   
 
@@ -315,15 +316,20 @@ a.active {
     color: white;
     background-color: #000;
     font-size: 20px;
-    width: 180px;
-    padding: 12px;
+    width: 160px;
+    padding: 12px 5px;
     border: none;
     border-radius: 5px;
     margin-top: 50px;
     transition: background-color 0.3s ease-in-out;
 }
 .resume:hover {
-    background-color: rgb(34, 123, 224);
+
+    background-color:whitesmoke;
+    color: #000;
+    box-shadow: 0px 0px 15px whitesmoke;
+    transform: scale(1.1);
+    transition: box-shadow 0.3s ease-in 0.3s;
 }
 
 .follow{
@@ -369,10 +375,10 @@ a.active {
 
 #about {
     padding: 100px 0;
+    height:100vh;
+    background: #f3f3f3
 }
-#skills{
-    padding: 100px 0;
-}
+
 
 .about-img-div img {
     margin: 0 auto;
@@ -392,10 +398,17 @@ a.active {
 
 
 /* Skill */
+#skills{
+    padding: 100px 0;
+    height: 100vh;
+    background: #f3f3f3;
+}
 .scroller {
     padding: 80px 0px;
     width: 100%;
     overflow: hidden;
+    background: #ddd;
+   
     -webkit-mask: linear-gradient(
       90deg,
       transparent,
@@ -605,6 +618,7 @@ a.active {
 
 #projects {
     padding: 100px 0;
+    background: #f3f3f3;
 }
 
 .portfolio .categories-grid span {
