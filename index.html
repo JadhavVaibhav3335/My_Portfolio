@@ -61,7 +61,7 @@
                 <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
 
                     <h4>Jadhav Vaibhav</h4>
-                    <h1>Software<br /> <span>Developer</span> </h1> 
+                    <h1>Software<br /><span>Developer</span> </h1> 
                     <a href="https://drive.google.com/file/d/1TK6drAcfc4boWoeKh3HFX30zKoLKL3zI/view?usp=drivesdk">
                         <button class="resume">Resume</button>
                     </a>
@@ -81,7 +81,7 @@
         <div class="container">
             <div class="col-md-6" data-aos="fade-up">
                 <h4>01</h4>
-                <h1 class="size-50">Know <br /> About me</h1>
+                <h2 class="size-50">Know <br /> About me</h2>
                 <div class="h-50"></div>
                 <p>I'm Vaibhav, a seasoned Fullstack developer driven by the thrill of building robust and dynamic web applications. With expertise spanning both frontend and backend technologies, I infuse projects with versatility and depth, delivering solutions that stand the test of time.</p>
                
@@ -103,7 +103,7 @@
         <div class="container">
             <div class="col-md-12">
                 <h4>02</h4>
-                <h1 class="size-50">My <br>Skills</h1>
+                <h2 class="size-50">My <br>Skills</h2>
             </div>
             <div class="scroller" data-direction="left" data-speed="fast">
                 <div class="scroller__inner">
@@ -152,7 +152,7 @@
         <div class="container">
             <div class="col-md-12">
                 <h4>03</h4>
-                <h1 class="size-50">My <br />Portfolio</h1>
+                <h2 class="size-50">My <br />Portfolio</h2>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-12">
@@ -198,7 +198,7 @@
         <div class="container">
             <div class="col-md-12">
                 <h4>04</h4>
-                <h1 class="size-50">My <br /> Projects</h1> 
+                <h2 class="size-50">My <br /> Projects</h2> 
             </div>
             <!-- main container -->
             <div class="main-container portfolio-inner clearfix">
@@ -248,7 +248,7 @@
         <div class="container">
             <div class="col-md-12">
                 <h4>05</h4>
-                <h1 class="size-50">Contact  Me</h1>
+                <h2 class="size-50">Contact  Me</h2>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-4" data-aos="fade-up">
@@ -318,6 +318,35 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("contact-form").onsubmit = async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch("https://your-portfolio.vercel.app/send-email", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+                const responseMessage = document.getElementById("response-message");
+
+                if (response.ok) {
+                    responseMessage.innerHTML = `<p class='green'>${result.success}</p>`;
+                    form.reset();
+                } else {
+                    responseMessage.innerHTML = `<p class='red'>${result.error}</p>`;
+                }
+            } catch (error) {
+                document.getElementById("response-message").innerHTML = `<p class='red'>Failed to send message. Try again!</p>`;
+            }
+        };
+    </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!--  plugins  -->
