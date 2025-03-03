@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -22,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/JadhavVaibhav3335/My-Portfolio/issues"
   },
-  
   "homepage": "https://github.com/JadhavVaibhav3335/My-Portfolio#readme",
   "description": ""
 }
