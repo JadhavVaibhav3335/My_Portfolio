@@ -6,8 +6,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
- 
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,6 +22,7 @@
   "bugs": {
     "url": "https://github.com/JadhavVaibhav3335/My-Portfolio/issues"
   },
+  
   "homepage": "https://github.com/JadhavVaibhav3335/My-Portfolio#readme",
   "description": ""
 }

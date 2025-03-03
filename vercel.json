@@ -14,7 +14,11 @@
       {
         "src": "/send-email",
         "dest": "/server.js"
+      },
+      {
+        "rewrites": [{ "source": "/(.*)", "destination": "/" }]
       }
+      
     ]
   }
   
